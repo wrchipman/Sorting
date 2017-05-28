@@ -2,9 +2,10 @@
 
 class QuickSort(object):
     def __init__(self, sorting_list = []):
-        print sorting_list
+        #print sorting_list
         self.quick_sort_main(sorting_list, 0, len(sorting_list)-1)
-        print sorting_list
+        #print sorting_list
+        #return sorting_list
 
     def quick_sort_main(self, sorting_list, first, last):
         if first <last:
