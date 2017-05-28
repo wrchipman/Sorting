@@ -35,12 +35,9 @@ class QuickSort(object):
                 done = True
 
             else:
-                temp = sorting_list[left_pointer]
-                sorting_list[left_pointer] = sorting_list[right_pointer]
-                sorting_list[right_pointer] = temp
+                sorting_list[left_pointer], sorting_list[right_pointer] = \
+                sorting_list[right_pointer], sorting_list[left_pointer]
 
-        temp = sorting_list[first]
-        sorting_list[first] = sorting_list[right_pointer]
-        sorting_list[right_pointer] = temp
-
+        sorting_list[first], sorting_list[right_pointer] = \
+        sorting_list[right_pointer], sorting_list[first]
         return right_pointer
